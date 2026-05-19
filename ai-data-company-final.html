@@ -137,6 +137,59 @@
     footer ul{list-style:none;margin-left:0}
     footer li{margin-bottom:5px;line-height:1.5}
     footer a{font-size:11.5px}
+    /* Track-map (FIG 1.1) */
+    .track-map-fig{margin:28px 0 36px;border:1px solid var(--rule);border-radius:2px;background:var(--paper)}
+    .track-map{padding:22px 22px 14px}
+    .tm-axis{font-family:ui-monospace,Menlo,monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);text-align:right;margin-bottom:10px}
+    .tm-grid{display:grid;grid-template-columns:160px repeat(3,1fr);gap:1px;background:var(--rule-soft)}
+    .tm-corner{background:var(--paper)}
+    .tm-col-head{background:var(--paper-edge);padding:10px 12px;text-align:left}
+    .tm-col-title{font-weight:700;font-size:13px;color:var(--ink);margin-bottom:4px}
+    .tm-col-sub{font-family:ui-monospace,Menlo,monospace;font-size:10.5px;color:var(--ink-faint);line-height:1.5}
+    .tm-row-head{background:var(--paper-edge);padding:14px 12px;display:flex;flex-direction:column;justify-content:center}
+    .tm-flag{font-size:18px;line-height:1;margin-bottom:4px}
+    .tm-region{font-weight:700;font-size:13px;color:var(--ink)}
+    .tm-region-sub{font-family:ui-monospace,Menlo,monospace;font-size:10.5px;color:var(--ink-faint);margin-top:3px;line-height:1.5}
+    .tm-cell{background:var(--paper);padding:12px;display:flex;flex-direction:column;gap:8px;min-height:120px}
+    .tm-cell-state{font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+    .tm-chips{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:5px}
+    .tm-chips li{font-size:11.5px;background:var(--paper-edge);border:1px solid var(--rule);padding:2px 8px;border-radius:2px;color:var(--ink-soft);font-family:ui-sans-serif,system-ui,sans-serif}
+    .tm-chips-empty li{font-style:italic;color:var(--ink-faint);background:transparent;border-style:dashed}
+    .tm-note{font-size:11.5px;color:var(--ink-soft);line-height:1.5;margin-top:auto;font-style:italic;border-top:1px dashed var(--rule-soft);padding-top:6px}
+    .tm-mature{border-left:3px solid #9aa39a}      /* 灰绿 - 饱和 */
+    .tm-mature .tm-cell-state{color:#5f6b5f}
+    .tm-hot{border-left:3px solid #c97a52}         /* 橙红 - 爆发 */
+    .tm-hot .tm-cell-state{color:#a55b3a}
+    .tm-emerging{border-left:3px solid var(--accent)}/* 蓝 - 新赛道 */
+    .tm-emerging .tm-cell-state{color:var(--accent)}
+    .tm-thin{border-left:3px solid #d4b86a}        /* 米黄 - 萌芽 */
+    .tm-thin .tm-cell-state{color:#a08540}
+    .tm-empty{border-left:3px solid var(--rule);background:repeating-linear-gradient(45deg,var(--paper),var(--paper) 6px,var(--paper-edge) 6px,var(--paper-edge) 12px)}
+    .tm-empty .tm-cell-state{color:var(--ink-faint)}
+    .tm-legend{display:flex;flex-wrap:wrap;gap:14px;padding:10px 0 0;font-family:ui-monospace,Menlo,monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint)}
+    .tm-leg{display:inline-flex;align-items:center;gap:6px}
+    .tm-leg::before{content:"";width:10px;height:10px;border-radius:1px;display:inline-block}
+    .tm-leg-mature::before{background:#9aa39a}
+    .tm-leg-hot::before{background:#c97a52}
+    .tm-leg-emerging::before{background:var(--accent)}
+    .tm-leg-thin::before{background:#d4b86a}
+    .tm-leg-empty::before{background:repeating-linear-gradient(45deg,var(--paper-edge),var(--paper-edge) 3px,var(--rule) 3px,var(--rule) 6px);border:1px solid var(--rule)}
+
+    /* RL Env deep-dive blocks (S7.3) */
+    .rl-deep{margin:18px 0;display:grid;gap:14px;grid-template-columns:1fr 1fr}
+    .rl-deep-card{border:1px solid var(--rule);background:var(--paper);padding:14px 16px;border-left:3px solid var(--accent)}
+    .rl-deep-card .rdc-tag{font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:6px}
+    .rl-deep-card .rdc-title{font-weight:700;font-size:14px;margin-bottom:8px;color:var(--ink)}
+    .rl-deep-card .rdc-body{font-size:13px;line-height:1.65;color:var(--ink-soft)}
+    .rl-deep-card .rdc-body ul{margin:6px 0 0;padding-left:18px}
+    .rl-deep-card .rdc-body li{margin-bottom:3px}
+    .rl-pricing{border:1px solid var(--rule);background:var(--accent-faint);padding:14px 18px;margin:14px 0;font-size:13px;color:var(--ink-soft)}
+    .rl-pricing-title{font-family:ui-monospace,Menlo,monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:8px}
+    .rl-pricing-row{display:flex;justify-content:space-between;border-bottom:1px dashed var(--rule-soft);padding:5px 0}
+    .rl-pricing-row:last-child{border-bottom:none}
+    .rl-pricing-row .rpl{color:var(--ink-soft)}
+    .rl-pricing-row .rpr{font-family:ui-monospace,Menlo,monospace;color:var(--ink);font-weight:600}
+
     @media(max-width:720px){
       body{padding:32px 16px 64px}
       .doc-title{font-size:26px}
@@ -146,6 +199,10 @@
       .pipeline{flex-direction:column}
       .pstep+.pstep{border-left:1px solid var(--rule);border-top:none}
       .pstep:not(:last-child)::after{content:"↓";right:auto;top:auto;bottom:-14px;left:50%}
+      .tm-grid{grid-template-columns:1fr}
+      .tm-col-head,.tm-row-head{padding:8px 10px}
+      .tm-axis{text-align:left}
+      .rl-deep{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -378,6 +435,95 @@
     <tr><td>2024–</td><td>专家数据瓶颈 + Agent 时代来临 + RLVR</td><td>专家判断数据、RL Environment、合成数据</td><td>Mercor、AfterQuery、Mechanize、Turing RL</td></tr>
   </tbody>
 </table>
+
+<h3>赛道地图：北美 × 国内 × 三层供给</h3>
+<p>把"通用众包 / 专家网络 / RL Environment"三层作为价值跃迁的三个台阶，横切北美与国内两个市场，可以直观看到中美玩家分布的「Y 型分化」——通用众包层中美都饱和，专家网络层北美已成熟而国内只见曙光，RL Environment 层北美已起规模而国内几近空白。</p>
+
+<figure class="track-map-fig">
+  <div class="track-map">
+    <div class="tm-axis">价值密度 / 单任务客单价 / 进入门槛 ────────►</div>
+    <div class="tm-grid">
+      <div class="tm-corner"></div>
+      <div class="tm-col-head tm-col-1">
+        <div class="tm-col-title">通用众包</div>
+        <div class="tm-col-sub">L1 · $0.01–$5/任务</div>
+        <div class="tm-col-sub">图像/点云/RLHF 偏好对</div>
+      </div>
+      <div class="tm-col-head tm-col-2">
+        <div class="tm-col-title">专家网络</div>
+        <div class="tm-col-sub">L2 · $30–$300/小时</div>
+        <div class="tm-col-sub">博士级 STEM / 行业专家</div>
+      </div>
+      <div class="tm-col-head tm-col-3">
+        <div class="tm-col-title">RL Environment</div>
+        <div class="tm-col-sub">L3 · $200–$2000/任务·$20K–$300K/环境</div>
+        <div class="tm-col-sub">可验证奖励的代码/工作流环境</div>
+      </div>
+
+      <div class="tm-row-head">
+        <div class="tm-flag">🇺🇸</div>
+        <div class="tm-region">北美</div>
+        <div class="tm-region-sub">头部 Lab 直采 $1B+/年</div>
+      </div>
+      <div class="tm-cell tm-mature">
+        <div class="tm-cell-state">饱和 · 整合</div>
+        <ul class="tm-chips">
+          <li>Scale AI</li><li>Appen</li><li>Labelbox</li><li>Sama</li>
+        </ul>
+        <div class="tm-note">RLHF 周期的赢家，正在被上层吞噬利润</div>
+      </div>
+      <div class="tm-cell tm-hot">
+        <div class="tm-cell-state">最热 · 爆发</div>
+        <ul class="tm-chips">
+          <li>Surge AI</li><li>Mercor</li><li>Turing</li><li>AfterQuery</li><li>Invisible</li>
+        </ul>
+        <div class="tm-note">$24B / $10B / $11.4B 估值梯队</div>
+      </div>
+      <div class="tm-cell tm-emerging">
+        <div class="tm-cell-state">新赛道 · 高增长</div>
+        <ul class="tm-chips">
+          <li>Mechanize</li><li>Prime Intellect</li><li>Surge RL</li><li>Mercor RL</li><li>Turing RL</li>
+        </ul>
+        <div class="tm-note">Anthropic 单 Lab 预算 $1B+/年</div>
+      </div>
+
+      <div class="tm-row-head">
+        <div class="tm-flag">🇨🇳</div>
+        <div class="tm-region">国内</div>
+        <div class="tm-region-sub">市场 200–300 亿元 / 字节生态主导</div>
+      </div>
+      <div class="tm-cell tm-mature">
+        <div class="tm-cell-state">分散 · 价格战</div>
+        <ul class="tm-chips">
+          <li>数据堂</li><li>海天瑞声</li><li>曼孚科技</li><li>云测数据</li><li>龙猫数据</li>
+        </ul>
+        <div class="tm-note">具身智能/Agent 训练是最大增量</div>
+      </div>
+      <div class="tm-cell tm-thin">
+        <div class="tm-cell-state">萌芽 · 字节系驱动</div>
+        <ul class="tm-chips">
+          <li>Unikat（字节系）</li><li>Volcengine 数据服务</li><li>少量 FA / 私域专家网络</li>
+        </ul>
+        <div class="tm-note">缺独立精英网络层，Lab 倾向自建/直采</div>
+      </div>
+      <div class="tm-cell tm-empty">
+        <div class="tm-cell-state">几乎空白</div>
+        <ul class="tm-chips tm-chips-empty">
+          <li>—</li>
+        </ul>
+        <div class="tm-note">先发窗口：国内版 RL Gym / 中文工作流 RL Env</div>
+      </div>
+    </div>
+    <div class="tm-legend">
+      <span class="tm-leg tm-leg-mature">饱和</span>
+      <span class="tm-leg tm-leg-hot">爆发</span>
+      <span class="tm-leg tm-leg-emerging">新赛道</span>
+      <span class="tm-leg tm-leg-thin">萌芽</span>
+      <span class="tm-leg tm-leg-empty">空白</span>
+    </div>
+  </div>
+  <figcaption><span class="fn">FIG 1.1</span>AI 数据公司赛道地图：北美 × 国内 × 通用众包 / 专家网络 / RL Environment</figcaption>
+</figure>
 </section>
 
 <!-- ───────────────────────────────── S2 需求侧 ───────────────────────────────── -->
@@ -710,6 +856,92 @@
 <div class="callout warn">
   <div class="cl">Mechanize 核心判断</div>
   <p>「Cheap RL tasks will waste compute.」廉价的 RL 任务不是没价值，而是负产出——<a href="https://www.mechanize.work/blog/cheap-rl-tasks-will-waste-compute/" target="_blank">Mechanize 估算</a>每个 RL 任务需要约 $2,400 的训练算力。如果任务质量差，这些算力全部浪费，模型甚至可能学到错误策略。</p>
+</div>
+
+<h3>7.3.1 RL Environment 玩家分层（截至 2026 年初）</h3>
+<p>RL Environment 赛道虽然年轻，但供给侧已经分化为四类玩家。它们的差异不在「能不能做 Env」，而在<strong>从何处切入价值链</strong>：是从专家数据网络向下游做 Env，还是从开源 RL 框架向上游做商业化，抑或是 Lab 自建。</p>
+
+<div class="rl-deep">
+  <div class="rl-deep-card">
+    <div class="rdc-tag">类型 A · 专家网络衍生</div>
+    <div class="rdc-title">Surge AI / Mercor / Turing RL</div>
+    <div class="rdc-body">
+      从 RLHF / 专家数据本业向下游延伸。优势是已有的博士级专家网络可直接被复用为「环境设计师」（Environment Engineer），且与头部 Lab 的采购关系已建立。劣势是组织基因仍偏「人力管理」而非「软件工程」。
+      <ul>
+        <li>Surge：2025 年底成立独立 RL Env 部门，Edwin Chen 公开承认需求「过去几个月显著增长」</li>
+        <li>Mercor：已向投资人推销 RL Env 业务，客户包含 OpenAI/Meta/Anthropic，与 Surge 直接竞争</li>
+        <li>Turing：从人才市场进化为「研究加速器」，主打 Long-Horizon Agentic RL</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="rl-deep-card">
+    <div class="rdc-tag">类型 B · 原生 RL Lab</div>
+    <div class="rdc-title">Mechanize / Prime Intellect</div>
+    <div class="rdc-body">
+      从第一天就是「RL Environment 公司」。组织基因偏研究与工程，没有 RLHF 时代的历史包袱。卖给 Lab 的不是工时，而是<strong>可复用的环境资产 + 评测基础设施</strong>。
+      <ul>
+        <li>Mechanize：定位「让经济中每个工作流都可被 RL 训练」，论点是「廉价 RL 任务浪费算力」</li>
+        <li>Prime Intellect：开源 <a href="https://github.com/PrimeIntellect-ai/verifiers" target="_blank">verifiers</a> 库（轻量级 Env 框架），走 "RL Environment as a developer platform" 路线</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="rl-deep-card">
+    <div class="rdc-tag">类型 C · Lab 自建</div>
+    <div class="rdc-title">OpenAI / Anthropic / DeepMind 内部团队</div>
+    <div class="rdc-body">
+      最核心、最敏感的 Env（涉及未发布产品形态、内部 Agent Stack）一律自建。a16z Jennifer Li：「<em>所有大 Lab 都在内部建 RL 环境，但创建这些数据集非常复杂，所以也在找第三方供应商。</em>」自建+外采的混合策略将长期共存。
+      <ul>
+        <li>Anthropic 2026 内部目标：RL Env 投入 <a href="https://www.theinformation.com/articles/anthropic-openai-developing-ai-co-workers" target="_blank">超过 $1B</a></li>
+        <li>OpenAI：内部 "Universe / Gym 2.0" 类项目持续存在，外采用于补充长尾域</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="rl-deep-card">
+    <div class="rdc-tag">类型 D · 垂直领域 Env</div>
+    <div class="rdc-title">代码 / 浏览器 / 企业工作流的 Env 专家</div>
+    <div class="rdc-body">
+      聚焦单一动作空间做透。代码 Env（终端+测试套件）门槛最低、最先成熟；浏览器/桌面 Agent Env 正在爆发；企业工作流（CRM/ERP/邮件/日历）是未来 12 个月的最大蓝海。
+      <ul>
+        <li>代码：HumanEval/SWE-bench 类已被吃透，下一波是「企业代码库 + 真实 PR Workflow」</li>
+        <li>浏览器：WebArena/VisualWebArena → 商业化版本（Multi-On、Adept 系遗产）</li>
+        <li>企业工作流：AfterQuery 的 "World" 产品线、Invisible 的白领任务库都在卡位</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h3>7.3.2 RL Environment 的经济学</h3>
+<p>Epoch AI 2026.01 对 18 名从业者的访谈披露了第一组可对照的价格区间。这是迄今最完整的一手价格数据：</p>
+
+<div class="rl-pricing">
+  <div class="rl-pricing-title">RL Environment 价格表（北美市场 · 2026 Q1）</div>
+  <div class="rl-pricing-row"><span class="rpl">单任务（task）：基础代码任务，单元测试可验证</span><span class="rpr">$200 – $600</span></div>
+  <div class="rl-pricing-row"><span class="rpl">单任务：复杂多步骤工作流（含浏览器/文件系统/API）</span><span class="rpr">$800 – $2,000</span></div>
+  <div class="rl-pricing-row"><span class="rpl">完整环境（environment）：单一域的 Docker 容器 + 评分器 + 100+ 任务</span><span class="rpr">$20K – $80K</span></div>
+  <div class="rl-pricing-row"><span class="rpl">完整环境：长链路企业级（CRM/财务/法务工作流模拟器）</span><span class="rpr">$100K – $300K</span></div>
+  <div class="rl-pricing-row"><span class="rpl">单任务训练成本（Mechanize 估算）</span><span class="rpr">≈ $2,400 算力</span></div>
+  <div class="rl-pricing-row"><span class="rpl">毛利率（精英网络型，参考 Surge）</span><span class="rpr">60% – 80%</span></div>
+</div>
+
+<p>价格结构暗示一个关键逻辑：<strong>RL Env 的客单价并不直接由"任务时长"决定，而由"评分器质量 × 环境真实度 × 防 Reward Hacking 能力"三者乘积决定。</strong>这意味着定价权将逐步从甲方（Lab）转向有专属评分器知识产权的供应商——这是 SaaS 化的雏形。</p>
+
+<h3>7.3.3 三大未解难题</h3>
+<ul>
+  <li><strong>Reward Hacking 防御战</strong>：模型越聪明，越擅长找评分器漏洞（典型例子：在测试里 mock 真实 API、利用浮点误差通过数学题）。<a href="https://www.mechanize.work/blog/cheap-rl-tasks-will-waste-compute/" target="_blank">Mechanize</a> 的判断是——未来 12 个月内，"评分器加固"将成为比"任务设计"更重要的研发投入。这是供应商真正的护城河。</li>
+  <li><strong>规模化的不可能三角</strong>：质量（通过率 2–30% 的甜区）× 数量（万级任务）× 多样性（覆盖长尾域）。Epoch AI 访谈指出，目前没有任何团队能同时拿下三个目标——这是 RL Env 公司估值上限的天花板，也是研究突破的下一个机会窗口。</li>
+  <li><strong>Generalization vs Overfitting</strong>：在 Env A 训练出的能力是否迁移到 Env B？目前的答案不乐观——这意味着 Lab 必须采购大量「领域 × 任务族」交叉组合的环境，从而抬高 RL Env 公司的 TAM，但也削弱了单环境的复用价值。</li>
+</ul>
+
+<h3>7.3.4 对国内市场的映射</h3>
+<p>国内 RL Environment 几近空白（参见 §1 赛道地图）。三个原因：(1) 头部 Lab（字节豆包、Moonshot、智谱、Minimax、DeepSeek）的 Agent 战略尚在收敛期，对外部 Env 采购意愿低于北美 Lab；(2) 国内缺乏「精英专家网络」基础设施，从 RLHF 直接跃迁到 RL Env 的过渡断层；(3) 中文工作流 Env（飞书/钉钉/企微/Office365 国行版）需要独立采集与权限授权，海外玩家无法直接复用。</p>
+<p>反过来看，这正是国内创业者的<strong>结构性时间窗口</strong>——12–18 个月内，谁先建出"中文企业工作流 RL Gym"，谁就拿到下一轮 Agent 训练的卖水权。从风险投资视角看，这是一个具备「先发可锁定 / 跨境可迁移 / 中美双采购方」三重属性的稀缺机会，值得作为独立子雷达持续跟踪（参见 <a href="#s11">§11 行业机会</a>）。</p>
+
+<div class="callout cite">
+  <div class="cl">CreekStone 内部判断 · 2026.05</div>
+  <p>RL Environment 在本报告中以子章节呈现，但其作为「Agent 训练新基础设施」的属性，已经超越「AI 数据公司」的范畴——后续将拆分为独立的命题深研（<em>L11: RL Environment — 第三代数据基础设施</em>），与 Agent Infra 的 L2 Memory、L4 Orchestration 形成体系化对照。</p>
 </div>
 </section>
 
